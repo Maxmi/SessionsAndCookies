@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title App 2
+    link(href='/css/style.css' rel='stylesheet')
+  body
+    if firstName && lastName && color 
+      h1 Welcome back #{firstName} #{lastName}! 
+      p I bet your favorite color is #{color}!
+      
+    else   
+      h1 Welcome stranger! Tell us about yourself.
+      form(method='POST', action='/')    
+        input(type='text' name='firstName' placeholder='First name')
+        br
+        input(type='text' name='lastName' placeholder='Last name')
+        br
+        input(type='text' name='color' placeholder='Favorite color')
+        br
+        button(type='submit') That's me!
