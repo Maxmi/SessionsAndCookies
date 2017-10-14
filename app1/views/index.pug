@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    title App 1
+    link(href='/css/style.css' rel='stylesheet')
+  body
+    if name 
+      h1 Welcome back #{name}!
+    else   
+      h1 Welcome stranger! What's your name?
+      form(method='POST', action='/')
+    
+        input(type='text' name='name' placeholder='Your name here')
+        
+        button(type='submit') Save my name!
